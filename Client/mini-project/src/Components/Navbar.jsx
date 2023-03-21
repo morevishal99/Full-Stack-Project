@@ -1,12 +1,26 @@
 import React from 'react'
 
-const Navbar = () => {
-    return (<div style={{display:"flex",justifyContent:"space-around"}}>
+import { Link } from "react-router-dom";
 
-        <div>Home</div>
-        <div>About</div>
-        <div>Login</div>
-        <div>Signup</div>
+const Navbar = () => {
+    return (
+
+        <div style={{display:"flex ",justifyContent:"space-around"}}>
+      <Link to="/">
+        <h3>Home</h3>
+      </Link>
+      <Link to="/login">
+        <h3 >Login</h3>
+      </Link>
+      <Link to="/signup">
+        <h3 >Signup</h3>
+      </Link>
+      <Link to="/user">
+        <h3 >UserList</h3>
+      </Link>
+      {/* <Link to="#">
+        <h3 data-testid="login-link">User</h3>
+      </Link> */}
     </div>
     )
 }
