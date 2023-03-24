@@ -1,11 +1,13 @@
 const mongoose =require("mongoose");
 
 const userData = mongoose.Schema({
-    name:String,
+    username:String,
     email:String,
     password:String||Number,
     phonenumber:Number,
-    cart:Array
+    dob:String||Number,
+    role:String
+
 })
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from "axios"
-const UserDetails = () => {
+const About = () => {
   const [userData, setUserData] = React.useState([])
   console.log(userData)
   const getData = () => {
@@ -27,4 +27,4 @@ const UserDetails = () => {
   )
 }
 
-export default UserDetails
+export default About

@@ -20,7 +20,7 @@ app.post("/adduser", validator, async (req, res) => {
         const userDate = new userModel(payload)
         await userDate.save()
         res.status(200).send("New User Added")
-
+        res.redirect("http://localhost:3000/login")
     } catch (error) {
         res.send({ "msg": error.message })
     }
@@ -33,6 +33,7 @@ app.get("/user", async (req, res) => {
     try {
         const user = await userModel.find(query)
         res.send(user)
+        
     } catch (error) {
         res.send({ "msg": error.message })
     }
@@ -41,7 +42,7 @@ app.get("/user", async (req, res) => {
 app.listen(process.env.PORT, async () => {
     try {
         await connection
-        console.log("Connected to sever")
+        console.log("Connected to server")
     } catch (error) {
         console.log(error.message)
     }
